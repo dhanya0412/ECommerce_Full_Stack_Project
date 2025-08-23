@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffe6f0; /* light pink background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signupform {
+    width: 400px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: #fff0f5; /* very light pink */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+.inputgroup {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.inputgroup input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ff3399;
+    outline: none;
+    background-color: transparent;
+    font-size: 16px;
+    color: #333;
+}
+
+.inputgroup label {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ff3399;
+}
+
+.divcallforaction {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btnsignup {
+    padding: 12px 30px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(255, 105, 180, 0.4);
+    transition: background-color 0.3s ease;
+}
+
+.btnsignup:hover {
+    background-color: #ff3399;
+}
+
+.errormessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
+.lockscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 204, 229, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ff3399;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.lblwait {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ff3399;
+}

@@ -1,0 +1,42 @@
+.lockscreen {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 182, 193, 0.6); /* Light pastel pink */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.applylockscreen {
+    visibility: visible;
+    opacity: 1;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border-top: solid 5px #FF69B4;  /* Hot pink */
+    border-right: solid 5px #FFD1DC; /* Soft pastel pink */
+    border-bottom: solid 5px #FFC0CB; /* Light pink */
+    border-left: solid 5px transparent;
+    animation: spin 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.lblwait {
+    font-size: 18px;
+    color: #FF69B4; /* Hot pink */
+    font-weight: bold;
+    margin-top: 15px;
+}
+
