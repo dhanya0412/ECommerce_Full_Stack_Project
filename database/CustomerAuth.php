@@ -6,7 +6,7 @@ class CustomerAuth {
         $this->conn = $pdo;
     }
 
-    // ✅ Login method
+    //Login method
     public function validateCustomerLogin($email, $password) {
         $stmt = $this->conn->prepare("SELECT * FROM customer WHERE cust_email = ?");
         $stmt->execute([$email]);
@@ -18,14 +18,14 @@ class CustomerAuth {
         return false;
     }
 
-    // ✅ Check if email exists
+    //Check if email exists
     public function userExists($email) {
         $stmt = $this->conn->prepare("SELECT customer_id FROM customer WHERE cust_email = ?");
         $stmt->execute([$email]);
         return $stmt->fetchColumn() !== false;
     }
 
-    // ✅ Register new customer
+    //Register new customer
     public function registerCustomer($name, $email, $password) {
         if ($this->userExists($email)) {
             return false;
